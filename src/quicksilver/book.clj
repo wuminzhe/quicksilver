@@ -7,7 +7,11 @@
 ;   10    [(10 30) (11 120)]
 ;   ...
 ; }
-
+;{
+;  10.5 [{:price 10.5, :quantity 200} {:price 10.5, :quantity 70} {:price 10.5, :quantity 340}],
+;  10   [{:price 10, :quantity 100}   {:price 10, :quantity 80}],
+;  9    [{:price 9, :quantity 20}     {:price 9, :quantity 60}]
+;}
 ; key是价格，通过价格进行排序
 (def ask-book (atom (sorted-map-by <))) ; 卖单，价格低的在前面
 (def bid-book (atom (sorted-map-by >))) ; 买单，价格高的在前面
